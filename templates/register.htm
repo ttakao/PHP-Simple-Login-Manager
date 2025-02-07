@@ -1,0 +1,24 @@
+<h2>ユーザー登録</h2>
+<p>アカウントを作成するには、このフォームに記入してください。</p>
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <div class="form-group">
+        <label>ユーザー名</label>
+        <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+        <span class="invalid-feedback"><?php echo $username_err; ?></span>
+    </div>    
+    <div class="form-group">
+        <label>メールアドレス</label>
+        <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
+        <span class="invalid-feedback"><?php echo $email_err; ?></span>
+    </div>
+    <div class="form-group">
+        <label>パスワード</label>
+        <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+        <span class="invalid-feedback"><?php echo $password_err; ?></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="登録">
+        <input type="reset" class="btn btn-secondary ml-2" value="リセット">
+    </div>
+    <p>既にアカウントをお持ちですか? <a href="login.php">ここからログイン</a></p>
+</form>
