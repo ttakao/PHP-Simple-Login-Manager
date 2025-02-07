@@ -6,17 +6,17 @@ use PHPMailer\PHPMailer\Exception;
 // Load Composer's autoloader
 require 'vendor/autoload.php';
 
-define('BASE_URL', 'http://192.168.65.9/fjweb/');
-define('MAIL_HOST', 'sandbox.smtp.mailtrap.io');
-define('MAIL_USER', '44e5e7f07c5d09');
-define('MAIL_PASSWORD','b3800f74470b43');
-define('MAIL_FROM_ADDRESS','ttakao@mind-craft.net');
-define('MAIL_FROM_NAME','Mind Craft Development Team');
+define('BASE_URL', '');
+define('MAIL_HOST', '');
+define('MAIL_USER', '');
+define('MAIL_PASSWORD','');
+define('MAIL_FROM_ADDRESS','');
+define('MAIL_FROM_NAME','');
 
 define('DB_HOST','localhost');
-define('DB_NAME','fj-web');
-define('DB_USER','tsukasa');
-define('DB_PASSWORD', 'password');
+define('DB_NAME','');
+define('DB_USER','');
+define('DB_PASSWORD', '');
 
 require_once 'db_functions.php';
 
