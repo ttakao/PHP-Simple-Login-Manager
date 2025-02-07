@@ -1,6 +1,7 @@
 # PHPで使うシンプルな会員管理パッケージ
 
-会員の登録、ログイン、ログオフ、パスワードのリセットだけのスケルトンに近いパッケージです。
+会員の登録、ログイン、ログオフ、パスワードのリセットだけのスケルトンに近いパッケージです。\
+最近はワンページアプリも多く、必ずしもMVCフレームワークを使う必要はないように思います。
 
 ## 背景
 このパッケージはPHPを使ったWebアプリケーションで必ず必要となる、会員管理のテンプレートです。
@@ -14,17 +15,18 @@
 1. レンタルサーバーではまだまだPHPが主流である
 1. どんなシンプルなフレームワークも他パッケージに負けまいとして結局ブタのように太っていく
 1. メールを送信するためにPHPMailerを使わないとトラブルが起きがち
+1. ひとりで書いてメンテナンスするWebサービスに対して、よく使われているフレームワークは規模が大きすぎる
 
 ## 構成
-以上をふまえたシンプルな構成となっています。
-PHPMailerがcomposerで導入されています。
+以上をふまえたシンプルな構成となっています。\
+PHPMailerがcomposerで導入されています。\
 環境による変数はすべてinclude/functions.php内のdefineステートメントに集約してあります。
 
-会員登録にはregister.phpとverify_email.phpが使われ、htmlはtemplate/register.htmです。
+* 会員登録にはregister.phpとverify_email.phpが使われ、htmlはtemplate/register.htmです。\
 登録するとメールにリンクが飛び、それを踏むことで正式ログインとなります。
-ログインはlogin.phpで、htmlはlogin.htm
-パスワードリセットはforgot_password.phpとreset_password.phpが使われ、htmlはforgot_password.htmとreset_password.htm
+* ログインはlogin.phpで、htmlはlogin.htm
+* パスワードリセットはforgot_password.phpとreset_password.phpが使われ、htmlはforgot_password.htmとreset_password.htm　\
 要求するとメールにリンクが飛び、それを踏むことでリセットとなります。
-ログアウトはlogout.php
+* ログアウトはlogout.php
 
-
+以上の機能しかありません。
